@@ -1,0 +1,94 @@
+{
+    "type_effectiveness": {
+        "normal": {
+            "super_effective_against": [],
+            "not_effective_against": ["rock", "steel"],
+            "no_effect": ["ghost"]
+        },
+        "fire": {
+            "super_effective_against": ["grass", "bug", "ice", "steel"],
+            "not_effective_against": ["water", "rock", "fire", "dragon"],
+            "no_effect": ["none"]
+        },
+        "water": {
+            "super_effective_against": ["fire", "ground", "rock"],
+            "not_effective_against": ["water", "grass", "dragon"],
+            "no_effect": ["none"]
+        },
+        "electric": {
+            "super_effective_against": ["water", "flying"],
+            "not_effective_against": ["electric", "grass", "dragon"],
+            "no_effect": ["ground"]
+        },
+        "grass": {
+            "super_effective_against": ["water", "ground", "rock"],
+            "not_effective_against": ["fire", "grass", "poison", "flying", "bug", "dragon", "steel"],
+            "no_effect": ["none"]
+        },
+        "ice": {
+            "super_effective_against": ["grass", "ground", "flying", "dragon"],
+            "not_effective_against": ["fire", "water", "ice", "steel"],
+            "no_effect": ["none"]
+        },
+        "fighting": {
+            "super_effective_against": ["normal", "ice", "rock", "dark", "steel"],
+            "not_effective_against": ["poison", "flying", "psychic", "bug", "fairy"],
+            "no_effect": ["ghost"]
+        },
+        "poison": {
+            "super_effective_against": ["grass", "fairy"],
+            "not_effective_against": ["poison", "ground", "rock", "ghost"],
+            "no_effect": ["steel"]
+        },
+        "ground": {
+            "super_effective_against": ["fire", "electric", "poison", "rock", "steel"],
+            "not_effective_against": ["grass", "bug"],
+            "no_effect": ["flying"]
+        },
+        "flying": {
+            "super_effective_against": ["grass", "fighting", "bug"],
+            "not_effective_against": ["electric", "rock", "steel"],
+            "no_effect": ["none"]
+        },
+        "psychic": {
+            "super_effective_against": ["fighting", "poison"],
+            "not_effective_against": ["psychic", "steel"],
+            "no_effect": ["dark"]
+        },
+        "bug": {
+            "super_effective_against": ["grass", "psychic", "dark"],
+            "not_effective_against": ["fire", "fighting", "poison", "flying", "ghost", "steel", "fairy"],
+            "no_effect": ["none"]
+        },
+        "rock": {
+            "super_effective_against": ["fire", "ice", "flying", "bug"],
+            "not_effective_against": ["fighting", "ground", "steel"],
+            "no_effect": ["none"]
+        },
+        "ghost": {
+            "super_effective_against": ["psychic", "ghost"],
+            "not_effective_against": ["dark"],
+            "no_effect": ["normal"]
+        },
+        "dragon": {
+            "super_effective_against": ["dragon"],
+            "not_effective_against": ["steel"],
+            "no_effect": ["fairy"]
+        },
+        "dark": {
+            "super_effective_against": ["psychic", "ghost"],
+            "not_effective_against": ["fighting", "dark", "fairy"],
+            "no_effect": ["none"]
+        },
+        "steel": {
+            "super_effective_against": ["ice", "rock", "fairy"],
+            "not_effective_against": ["fire", "water", "electric", "steel"],
+            "no_effect": ["none"]
+        },
+        "fairy": {
+            "super_effective_against": ["fighting", "dragon", "dark"],
+            "not_effective_against": ["fire", "poison", "steel"],
+            "no_effect": ["none"]
+        }
+    }
+}
