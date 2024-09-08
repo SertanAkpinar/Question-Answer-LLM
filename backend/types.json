@@ -1,0 +1,110 @@
+[
+    {
+        "name": "normal",
+        "super effective against": [],
+        "not effective against": ["rock", "steel"],
+        "no effect": ["ghost"]
+    },
+    {
+        "name": "fire",
+        "super effective against": ["grass", "bug", "ice", "steel"],
+        "not effective against": ["water", "rock", "fire", "dragon"],
+        "no effect": []
+    },
+    {
+        "name": "water",
+        "super effective against": ["fire", "ground", "rock"],
+        "not effective against": ["water", "grass", "dragon"],
+        "no effect": []
+    },
+    {
+        "name": "electric",
+        "super effective against": ["water", "flying"],
+        "not effective against": ["electric", "grass", "dragon"],
+        "no effect": ["ground"]
+    },
+    {
+        "name": "grass",
+        "super effective against": ["water", "ground", "rock"],
+        "not effective against": ["fire", "grass", "poison", "flying", "bug", "dragon", "steel"],
+        "no effect": []
+    },
+    {
+        "name": "ice",
+        "super effective against": ["grass", "ground", "flying", "dragon"],
+        "not effective against": ["fire", "water", "ice", "steel"],
+        "no effect": []
+    },
+    {
+        "name": "fighting",
+        "super effective against": ["normal", "ice", "rock", "dark", "steel"],
+        "not effective against": ["poison", "flying", "psychic", "bug", "fairy"],
+        "no effect": ["ghost"]
+    },
+    {
+        "name": "poison",
+        "super effective against": ["grass", "fairy"],
+        "not effective against": ["poison", "ground", "rock", "ghost"],
+        "no effect": ["steel"]
+    },
+    {
+        "name": "ground",
+        "super effective against": ["fire", "electric", "poison", "rock", "steel"],
+        "not effective against": ["grass", "bug"],
+        "no effect": ["flying"]
+    },
+    {
+        "name": "flying",
+        "super effective against": ["grass", "fighting", "bug"],
+        "not effective against": ["electric", "rock", "steel"],
+        "no effect": []
+    },
+    {
+        "name": "psychic",
+        "super effective against": ["fighting", "poison"],
+        "not effective against": ["psychic", "steel"],
+        "no effect": ["dark"]
+    },
+    {
+        "name": "bug",
+        "super effective against": ["grass", "psychic", "dark"],
+        "not effective against": ["fire", "fighting", "poison", "flying", "ghost", "steel", "fairy"],
+        "no effect": []
+    },
+    {
+        "name": "rock",
+        "super effective against": ["fire", "ice", "flying", "bug"],
+        "not effective against": ["fighting", "ground", "steel"],
+        "no effect": []
+    },
+    {
+        "name": "ghost",
+        "super effective against": ["psychic", "ghost"],
+        "not effective against": ["dark"],
+        "no effect": ["normal"]
+    },
+    {
+        "name": "dragon",
+        "super effective against": ["dragon"],
+        "not effective against": ["steel"],
+        "no effect": ["fairy"]
+    },
+    {
+        "name": "dark",
+        "super effective against": ["psychic", "ghost"],
+        "not effective against": ["fighting", "dark", "fairy"],
+        "no effect": []
+    },
+    {
+        "name": "steel",
+        "super effective against": ["ice", "rock", "fairy"],
+        "not effective against": ["fire", "water", "electric", "steel"],
+        "no effect": []
+    },
+    {
+        "name": "fairy",
+        "super effective against": ["fighting", "dragon", "dark"],
+        "not effective against": ["fire", "poison", "steel"],
+        "no effect": []
+    }
+]
