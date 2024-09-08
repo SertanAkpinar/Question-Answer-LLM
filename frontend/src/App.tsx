@@ -14,20 +14,33 @@ const App: React.FC = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
     setError('');
+    setResult(null);  // Reset result on new submit
 
     const [name, ...attributeParts] = query.split(' ');
-    const attribute = attributeParts.join(' '); // Der Rest ist die gewünschte Eigenschaft
+    const attribute = attributeParts.join(' ').trim();
 
     try {
-      let url = `http://localhost:3000/pokemon/${name}`;
-      if (attribute) {
-        url += `/${attribute}`;
-      }
+      let url: string;
 
-      const response = await axios.get<Record<string, any>>(url);
-      setResult(response.data);
+      // Try fetching as Pokémon first
+      url = `http://localhost:3000/pokemon/${name}${attribute ? '/' + attribute : ''}`;
+      try {
+        const response = await axios.get<Record<string, any>>(url);
+        setResult(response.data);
+      } catch (pokemonError) {
+        // If Pokémon not found, try fetching as a Type
+        url = `http://localhost:3000/type/${name}${attribute ? '/' + attribute : ''}`;
+        try {
+          const typeResponse = await axios.get<Record<string, any>>(url);
+          setResult(typeResponse.data);
+        } catch (typeError) {
+          // If both Pokémon and Type not found, handle error
+          setError('Pokémon or Type or Attribute not found');
+          setResult(null);
+        }
+      }
     } catch (err) {
-      setError('Pokémon or attribute not found');
+      setError('Pokémon or Type or Attribute not found');
       setResult(null);
     }
   };
@@ -57,6 +70,8 @@ const App: React.FC = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );
-}
+};
 
 export default App;
+
+
